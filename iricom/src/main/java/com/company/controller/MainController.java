@@ -24,9 +24,14 @@ public class MainController {
 		return "/main";
 	}
 	//로그인 페이지
-	@RequestMapping("/login")
+	@RequestMapping("/user/login")
 	public String login() {
-		return "/login";
+		return "/user/login";
+	}
+	//브랜드 페이지
+	@RequestMapping("/brands")
+	public String brands(){
+		return "/brands";
 	}
 	//접근 제한 페이지
 	@RequestMapping("/accessDenied")

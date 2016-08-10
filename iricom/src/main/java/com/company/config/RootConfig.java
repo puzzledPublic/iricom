@@ -8,6 +8,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.web.multipart.MultipartResolver;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 
@@ -36,5 +38,12 @@ public class RootConfig {
 		DataSourceTransactionManager dataSourcetransactionManager = new DataSourceTransactionManager();
 		dataSourcetransactionManager.setDataSource(dataSource());
 		return dataSourcetransactionManager;
+	}
+	@Bean
+	public MultipartResolver filterMultipartResolver(){
+		CommonsMultipartResolver commonsMultipartResolver = new CommonsMultipartResolver();
+		commonsMultipartResolver.setMaxUploadSize(100000000);
+		commonsMultipartResolver.setMaxInMemorySize(100000000);
+		return commonsMultipartResolver;
 	}
 }

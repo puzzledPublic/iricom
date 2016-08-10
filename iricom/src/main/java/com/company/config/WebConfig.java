@@ -8,6 +8,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.multipart.MultipartResolver;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
@@ -36,29 +38,11 @@ public class WebConfig extends WebMvcConfigurerAdapter{
 		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
 		super.addResourceHandlers(registry);
 	}
+	
 	@Bean
 	public JdbcTemplate jdbcTemplate(){
 		return new JdbcTemplate(dataSource);
-	}/*
-	@Bean
-	public DataSourceTransactionManager transactionManager(){
-		DataSourceTransactionManager dataSourcetransactionManager = new DataSourceTransactionManager();
-		dataSourcetransactionManager.setDataSource(dataSource());
-		return dataSourcetransactionManager;
-	}*/
-	/*
-	@Bean
-	public DataSource dataSource(){
-		ComboPooledDataSource dataSource = new ComboPooledDataSource();
-		try {
-			dataSource.setDriverClass("com.mysql.jdbc.Driver");
-		} catch (PropertyVetoException e) {
-			e.printStackTrace();
-		}
-		dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/test");
-		dataSource.setUser("root");
-		dataSource.setPassword("1575");
-		return dataSource;
-	}*/
+	}
+
 }
 

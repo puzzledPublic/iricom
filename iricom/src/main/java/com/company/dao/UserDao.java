@@ -12,5 +12,5 @@ public interface UserDao {
 	public int delete(String userId);
 	public int updateDate(String userId);
 	public UserVo selectOne(String userId);
-	
+	public int selectOneBool(String userId);
 }

@@ -71,4 +71,10 @@ public class UserDaoDbg implements UserDao {
 		},userId);
 	}
 
+	@Override
+	public int selectOneBool(String userId) {
+		// TODO Auto-generated method stub
+		return jdbcTemplate.queryForObject("select count(*) from DBG_USER_TB where user_id = ?", Integer.class, userId);
+	}
+
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<!-- 사이드 바가 없는 경우 템플릿 -->
 <meta charset="UTF-8">
 <title>또바기</title>
 <!-- Tell the browser to be responsive to screen width -->
@@ -91,7 +91,7 @@
 				<a style="color: black" href="./main">또바기</a>
 			</h1>
 			<div>
-				<a style="width: 100px; margin-left: 20px; color: black"
+				<a style="width: 100px; margin-left: 20px; color: black;"
 					id="link_01" class="menu_links "
 					href="./product/list.html?cate_no=56">OUTER</a> <a
 					style="width: 85px; margin-left: 20px; color: black" id="link_02"
@@ -113,52 +113,136 @@
 			<div class="container">
 				<!-- Main content -->
 				<section class="content">
-					<div class="login-box">
-						<div class="login-logo">
-							회원 로그인
-						</div>
-						<!-- /.login-logo -->
-						<div class="login-box-body">
-							<form action="../../index2.html" method="post">
-								<div class="form-group has-feedback">
-									<input type="email" class="form-control" placeholder="아이디">
-									<span
-										class="glyphicon glyphicon-user form-control-feedback"></span>
+					<!-- 
+					
+						본문 내용 들어갈 곳
+					
+					 -->
+					<div>회원가입</div>
+					<!-- general form elements -->
+					<!-- form start -->
+					<form role="form">
+						<div class="box box-primary">
+							<div class="box-header with-border">
+								<h3 class="box-title">이용 약관</h3>
+							</div>
+							<div class="box-body ">
+								<div class="form-group">
+									<div class="col-xs-12">
+										<textarea class="form-control" readonly rows="10" cols="100">서비스 약관
+
+								</textarea>
+									</div>
+									<div class="col-xs-12">
+										<div class="checkbox pull-right">
+											<label for="join_user_agree"> <input type="checkbox"
+												name="join_user_agree" id="join_user_agree" value="1" />
+												서비스 약관에 동의합니다.
+											</label>
+										</div>
+									</div>
 								</div>
-								<div class="form-group has-feedback">
-									<input type="password" class="form-control"
-										placeholder="비밀번호"> <span
-										class="glyphicon glyphicon-lock form-control-feedback"></span>
+								<div class="form-group">
+									<div class="col-xs-12">
+										<textarea class="form-control" readonly rows="10" cols="100">개인정보 수집 및 이용 동의
+■ 수집하는 개인정보 항목
+회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.
+ο 수집항목 : 이름 , 생년월일 , 성별 , 로그인ID , 비밀번호  , 자택 전화번호 , 자택 주소 , 휴대전화번호 , 이메일 , 직업 , 회사명 , 부서 , 직책 , 회사전화번호 , 취미 , 결혼여부 , 기념일 , 법정대리인정보 , 서비스 이용기록 , 접속 로그 , 접속 IP 정보 , 결제기록
+ο 개인정보 수집방법 : 홈페이지(회원가입) , 서면양식
+■ 개인정보의 수집 및 이용목적
+회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.
+ο 서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산 콘텐츠 제공 , 구매 및 요금 결제 , 물품배송 또는 청구지 등 발송
+ο 회원 관리
+회원제 서비스 이용에 따른 본인확인 , 개인 식별 , 연령확인 , 만14세 미만 아동 개인정보 수집 시 법정 대리인 동의여부 확인 , 고지사항 전달 ο 마케팅 및 광고에 활용
+접속 빈도 파악 또는 회원의 서비스 이용에 대한 통계
+■ 개인정보의 보유 및 이용기간
+회사는 개인정보 수집 및 이용목적이 달성된 후에는 예외 없이 해당 정보를 지체 없이 파기합니다.
+								</textarea>
+									</div>
+									<div class="col-xs-12">
+										<div class="checkbox pull-right">
+											<label for="join_user_agree"> <input type="checkbox"
+												name="join_user_agree" id="join_user_agree" value="1" />
+												개인정보 수집 및 이용 약관에 동의합니다.
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="box box-primary">
+							<div class="box-header with-border">
+								<h3 class="box-title">기본 정보</h3>
+							</div>
+							<!-- form start -->
+
+							<div class="box-body ">
+								<div class="row">
+									<div class="form-group col-xs-3">
+										<label for="exampleInputEmail">아이디</label> <input
+											type="email" class="form-control" id="exampleInputEmail1"
+											placeholder="아이디">
+									</div>
 								</div>
 								<div class="row">
-									<div class="col-xs-8">
-										<a href="#">아이디 찾기</a><br>
-										<a href="#">비밀번호 찾기</a>
+									<div class="form-group col-xs-3">
+										<label for="exampleInputPassword">비밀번호</label> <input
+											type="password" class="form-control"
+											id="exampleInputPassword1" placeholder="비밀번호">
 									</div>
-									<!-- /.col -->
-									<div class="col-xs-4">
-										<button type="submit"
-											class="btn btn-primary btn-block btn-flat">로그인</button>
+								</div>
+								<div class="row">
+									<div class="form-group col-xs-3">
+										<label for="exampleInputPasswordConfirm">비밀번호 확인</label> <input
+											type="password" class="form-control"
+											id="exampleInputPassword1" placeholder="비밀번호 확인">
 									</div>
-									<!-- /.col -->
 								</div>
-							</form>
-							<hr>
-							<div class="row">
-								<div class="col-xs-8">
-									아이디가 없다면 회원가입을 해주세요.
+								<div class="row">
+									<div class="form-group col-xs-3">
+										<label for="exampleInputName">이름</label> <input
+											type="password" class="form-control"
+											id="exampleInputPassword1" placeholder="이름">
+									</div>
 								</div>
-								<div class="col-xs-4">
-									<a class="btn btn-primary btn-block btn-flat " href="register.html" class="text-center">회원가입</a>
+								<div class="row">
+									<div class="form-group col-xs-1">
+										<label for="exampleInputPassword1">우편번호</label> <input
+											type="text" class="form-control" id="exampleInputPassword1"
+											placeholder="우편번호">
+									</div>
 								</div>
+								<div class="row">
+									<div class="form-group col-xs-5">
+										<label for="exampleInputPassword1">주소</label> <input
+											type="password" class="form-control"
+											id="exampleInputPassword1" placeholder="주소">
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group col-xs-4">
+										<label for="exampleInputPassword1">이메일</label> <input
+											type="password" class="form-control"
+											id="exampleInputPassword1" placeholder="이메일">
+									</div>
+								</div>
+							</div>
+							<!-- /.box-body -->
+
+							<div class="box-footer">
+								<button type="submit" class="btn btn-primary center-block">회원가입</button>
+							</div>
+							
+
 						</div>
-						<!-- /.login-box-body -->
-					</div>
-					</div>
+					</form>
+					<!-- /.box -->
 				</section>
+
 				<!-- /.content -->
 			</div>
-
+		</div>
+		<div>
 			<!-- /.content-wrapper -->
 			<footer class="main-footer">
 				<div class="container">
@@ -172,19 +256,20 @@
 				<!-- /.container -->
 			</footer>
 		</div>
-		<!-- jQuery 2.2.0 -->
-		<script src="../../resources/plugins/jQuery/jQuery-2.2.0.min.js"></script>
-		<!-- Bootstrap 3.3.6 -->
-		<script src="../../resources/bootstrap/js/bootstrap.min.js"></script>
-		<!-- SlimScroll -->
-		<script
-			src="../../resources/plugins/slimScroll/jquery.slimscroll.min.js"></script>
-		<!-- FastClick -->
-		<script src="../../resources/plugins/fastclick/fastclick.js"></script>
-		<!-- AdminLTE App -->
-		<script src="../../resources/dist/js/app.min.js"></script>
-		<!-- AdminLTE for demo purposes -->
-		<script src="../../resources/dist/js/demo.js"></script>
+	</div>
+	<!-- jQuery 2.2.0 -->
+	<script src="../../resources/plugins/jQuery/jQuery-2.2.0.min.js"></script>
+	<!-- Bootstrap 3.3.6 -->
+	<script src="../../resources/bootstrap/js/bootstrap.min.js"></script>
+	<!-- SlimScroll -->
+	<script
+		src="../../resources/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+	<!-- FastClick -->
+	<script src="../../resources/plugins/fastclick/fastclick.js"></script>
+	<!-- AdminLTE App -->
+	<script src="../../resources/dist/js/app.min.js"></script>
+	<!-- AdminLTE for demo purposes -->
+	<script src="../../resources/dist/js/demo.js"></script>
 
 </body>
 </html>

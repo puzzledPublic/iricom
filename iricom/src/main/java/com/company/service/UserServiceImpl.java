@@ -20,5 +20,13 @@ public class UserServiceImpl implements UserService{
 		// TODO Auto-generated method stub
 		return userDaoDbg.selectOne(userId);
 	}
+	@Override
+	public boolean selectOneBool(String userId) {
+		// TODO Auto-generated method stub
+		if(userDaoDbg.selectOneBool(userId)>0){
+			return true;
+		}
+		return false;
+	}
 
 }

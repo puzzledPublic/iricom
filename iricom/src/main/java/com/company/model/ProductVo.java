@@ -13,7 +13,7 @@ public class ProductVo {
 	private int price; // 상품 가격
 	private String material; // 상품 소재
 	private Date registerDate; // 상품 등록일
-	private Map<String,Integer> sizeAndStock = new HashMap<>();;
+	private Map<String,Integer> sizeAndStock = new HashMap<>();
 	//private List<Integer> stock = new ArrayList<>();;
 	public int getNumber() {
 		return number;

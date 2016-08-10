@@ -40,7 +40,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter{
 		                        .and()
 		                        .formLogin().usernameParameter("loginid")
 		                                    .passwordParameter("loginpw")
-		                                    .loginPage("/login")
+		                                    .loginPage("/user/login")
 		                                   // .successForwardUrl("/main")
 		                                    .failureUrl("/login?fail=true")
 		                                    .successHandler(dbgAuthenticationSuccessHandler())

@@ -2,35 +2,13 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%
-	String path = pageContext.getServletContext().getContextPath();
-%>
 <!DOCTYPE html>
 <html>
 <head>
 
 <meta charset="UTF-8">
 <title>또바기</title>
-<!-- Tell the browser to be responsive to screen width -->
-<meta
-	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
-	name="viewport">
-<!-- Bootstrap 3.3.6 -->
-<link rel="stylesheet"
-	href="<%=path%>/resources/bootstrap/css/bootstrap.min.css">
-<!-- Font Awesome -->
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-<!-- Ionicons -->
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-<!-- Theme style -->
-<link rel="stylesheet"
-	href="<%=path%>/resources/dist/css/AdminLTE.min.css">
-<!-- AdminLTE Skins. Choose a skin from the css/skins
-       folder instead of downloading all of them to reduce the load. -->
-<link rel="stylesheet"
-	href="<%=path%>/resources/dist/css/skins/_all-skins.min.css">
+<%@ include file="/WEB-INF/views/include/css.jsp"%>
 </head>
 <body class="sidebar-mini hold-transition skin-black-light ">
 	<div class="wrapper layout-top-nav">
@@ -99,7 +77,7 @@
 
 								</c:if> <c:if test="${empty userVo }">
 									<!-- Menu Toggle Button -->
-									<a href="./login"> <!-- The user image in the navbar--> <i
+									<a href="./user/login"> <!-- The user image in the navbar--> <i
 										class="fa fa-user"></i> <!-- hidden-xs hides the username on small devices so only the image appears. -->
 										<span class="hidden-xs">Login <i
 											class="fa fa-user-plus"></i> Register
@@ -120,7 +98,7 @@
 			<div>
 				<a style="width: 100px; margin-left: 20px; color: black"
 					id="link_01" class="menu_links "
-					href="./product/list?cate_no=3">OUTER</a> <a
+					href="./product/list?cate=3">OUTER</a> <a
 					style="width: 85px; margin-left: 20px; color: black" id="link_02"
 					class="menu_links " href="./product/list?cate=0">TOP</a> <a
 					style="width: 99px; margin-left: 20px; color: black" id="link_03"
@@ -131,7 +109,7 @@
 					style="width: 109px; margin-left: 20px; color: black" id="link_05"
 					class="menu_links " href="./brands">또바기 소개</a> <a
 					style="width: 148px; margin-left: 20px; color: black" id="link_06"
-					class="menu_links " href="../list?bn=free">COMMUNITY</a>
+					class="menu_links " href="./list?bn=free">COMMUNITY</a>
 			</div>
 		</div>
 		<!-- Full Width Column -->
@@ -215,22 +193,10 @@
 						href="http://almsaeedstudio.com">Almsaeed Studio</a>.
 					</strong> All rights reserved.
 				</div>
-		</div>
 		<!-- /.container -->
 		</footer>
+		</div>
 	</div>
-	<!-- jQuery 2.2.0 -->
-	<script src="<%=path%>/resources/plugins/jQuery/jQuery-2.2.0.min.js"></script>
-	<!-- Bootstrap 3.3.6 -->
-	<script src="<%=path%>/resources/bootstrap/js/bootstrap.min.js"></script>
-	<!-- SlimScroll -->
-	<script
-		src="<%=path%>/resources/plugins/slimScroll/jquery.slimscroll.min.js"></script>
-	<!-- FastClick -->
-	<script src="<%=path%>/resources/plugins/fastclick/fastclick.js"></script>
-	<!-- AdminLTE App -->
-	<script src="<%=path%>/resources/dist/js/app.min.js"></script>
-	<!-- AdminLTE for demo purposes -->
-	<script src="<%=path%>/resources/dist/js/demo.js"></script>
+	<%@ include file="/WEB-INF/views/include/js.jsp"%>
 </body>
 </html>

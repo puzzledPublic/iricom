@@ -9,6 +9,6 @@
 <body>
 ${errorMsg }<br>
 접근 권한이 없습니다.
-<a href="./main">메인으로</a>
+<a href="<%= request.getContextPath() %>/main">메인으로</a>
 </body>
 </html>
