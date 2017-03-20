@@ -26,7 +26,7 @@ public class RootConfig {
 		}
 		dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/test");
 		dataSource.setUser("root");
-		dataSource.setPassword("1575");
+		dataSource.setPassword("password");
 		return dataSource;
 	}
 	@Bean
